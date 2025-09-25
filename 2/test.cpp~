@@ -1,0 +1,37 @@
+#include "include.h"
+#include "pybasic.h"
+
+int main()
+{
+    {
+        pyobject x;
+        std::cout << x << std::endl;
+        std::cout << debug(x) << std::endl;
+        std::cout << x.type() << std::endl;
+        std::cout << type(x) << std::endl;
+        _ y(&x);
+        std::cout << y << std::endl;
+        std::cout << "debug(y):" << debug(y) << std::endl;
+        std::cout << "debug(y.type()): " << debug(y.type()) << std::endl;
+    }
+
+    {
+        std::cout << "testing pybasic/pyint ...\n";
+        pyint x = 43;
+        std::cout << "x: " << x << std::endl;
+        std::cout << "id(x): " << id(x) << std::endl;
+        std::cout << "debug(x): " << debug(x) << std::endl;
+        std::cout << x.type() << std::endl;
+        std::cout << type(x) << std::endl;
+        x += 1;
+        std::cout << x << std::endl;
+        _ y(&x);
+        _ z(&x);
+        y += z;
+        std::cout << y << std::endl;
+        std::cout << "debug(y):" << debug(y) << std::endl;
+        std::cout << "debug(y.type()): " << debug(y.type()) << std::endl;  
+    }
+  
+    return 0;
+}

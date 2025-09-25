@@ -1,0 +1,11 @@
+#include <iostream>
+
+class C{};
+
+C& operator=(C c, int i)
+{
+}
+
+int main()
+{
+}

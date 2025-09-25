@@ -1,0 +1,25 @@
+#ifndef INCLUDE_H
+#define INCLUDE_H
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "util.h"
+
+class pyobject;
+class p_pyobject;
+class pytype;
+class p_pytype;
+template< class T > class pybasic;
+
+#include "pyobject.h"
+#include "pytype.h"
+#include "pybasic.h"
+
+//#include "pystr.h"
+//#include "pynumeric.h"
+//#include "pylist.h"
+
+
+#endif

@@ -1,0 +1,21 @@
+pytype
+pyobject
+pystr
+pyint
+pyfloat
+
+We want each pyobject to have a pytype.
+We want pytype to be a pyobject.
+
+pytype
+
+
+
+I have this hierarchy:
+
+X
+|
+Y
+
+I want a static member in X called t and a static member in Y also called t.
+Virtual

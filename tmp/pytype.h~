@@ -1,0 +1,16 @@
+#ifndef PYTYPE_H
+#define PYTYPE_H
+
+#include <string>
+#include "pyobject.h"
+
+class pytype: public pyobject
+{
+public:
+  pytype(const std::string & s) : _x(s) {}
+
+private:
+  std::string _x;
+};
+
+#endif

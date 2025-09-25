@@ -1,0 +1,4 @@
+#include "pytype.h"
+
+pytype pyobjecttype("object");
+pytype pynonetype("NoneType");

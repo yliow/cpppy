@@ -1,0 +1,31 @@
+//=============================================================================
+// pytype
+// Should == be comparison based on id?
+//=============================================================================
+
+#ifndef PYTYPE_H
+#define PYTYPE_H
+
+#include "include.h"
+
+class pytype: public pyobject
+{
+public:
+  pytype(const std::string & s) : _x(s) {}
+  pytype(char s[]) : _x(std::string(s)) {}
+  std::string __repr__() const { return std::string("<type \"" + _x + "\">"); }
+  bool operator==(const pytype & t) const { return id() == t.id(); }
+  bool operator!=(const pytype & t) const { return !(*this == t); }
+
+private:
+  std::string _x;
+};
+
+
+class p_pytype: public p_pyobject
+{
+ public:
+  p_pytype(pytype * p) : p_pyobject(p) {}
+};
+
+#endif

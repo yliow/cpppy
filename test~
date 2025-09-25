@@ -1,0 +1,3 @@
+rm ./a.exe
+g++ test.cpp pytype.cpp pyobject.cpp pynumeric.cpp
+./a

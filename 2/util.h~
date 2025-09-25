@@ -1,0 +1,36 @@
+//=============================================================================
+// util.h
+//
+// std::string str(int);
+//=============================================================================
+#ifndef UTIL_H
+#define UTIL_H
+
+std::string str(int x)
+{
+  char t[100];
+  sprintf(t, "%d", x);
+  return std::string(t);
+}
+
+
+std::string str(double x)
+{
+  char t[100];
+  sprintf(t, "%f", x);
+  return std::string(t);
+}
+
+
+std::string str(bool b)
+{
+    return (b ? "true" : "false");
+}
+
+
+std::string str(const std::string & x)
+{
+  return x;
+}
+
+#endif
